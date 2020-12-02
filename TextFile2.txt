@@ -1,0 +1,101 @@
+Project 10 Graphs Notes
+
+There is no starting point in a graph so no roots or heads. You just start at which ever node you decide on
+
+Ajacency Graph 
+	- has nodes but they are called vertices when talking about graphs
+	- the lines connecting them are called edges
+An edge connects two vertices
+A vertices can has 0 to infinity of edges. if a is adjacent to b then b is adjacent to a
+
+the way we store these in memory is in a matrix which is a two dimensional array
+
+
+Directed Graphs and Weights
+	-now the lines are arrows directing where each vertices points and arrows are only one way
+	- each arrow has a weight, a weight can represent anything like money or time it takes to use that arrow
+
+
+
+Depth First
+Go as far away from the starting node until you get stuck
+	- when you get stuck you you back up to where you were right before and 
+	- we use a stack to do this
+
+Bredth First
+pick a starting vertice
+go everywhere you can that is one edge away
+then go everywhere you can with two edges
+	- we use a que to do this one
+WHEN DOING A BREDTH FIRST SEARCH
+	- create an array for the DISTANCE the size of how many vertices there are and fill it with INT_MAX for the time being
+	- create a second array for the predV with an int that wouldn't be there initisally like -1
+	- create a set called unvisited set holding the vertices index 1,2,3,4,5,0 they don't have to be in order
+	
+	FOR THE PopMin FIND THE SMALLEST DISTANCE THE VERTICES HAVE BETWEEN EACH OTHER WHEN YOU FIND THE SMALLEST
+	YOU TAKE THAT INDEX OUT OF THE UNVISTED SET AND ASSIGN currentV = TO THAT DISTANCE
+
+	APD is  
+
+
+	while(unvisitedSet.empty() == false)
+	{									// have to use iterators
+	 auto start = unvisitedSet.begin(); //begin returns the first instance
+	 int index = *start;
+		while (start != unvisitedSet.end())
+			{
+			++start;
+			}
+	}
+
+
+	when popping something out of an unvistited set
+
+	unvisitedSet.erase(unvisitedSet.find(inde)); // it asks for an index to remove
+
+
+
+
+In standard Template Library a set is a Binary Search Tree without any duplicate numbers. (this is just in here for knoweldge sake)
+
+
+
+Dijkstra's Shortest Algorithm
+give a starting vertice
+gives you the total weight it takes to get from the starting vertice to the one you want to get to
+there can be multiple ways to get there but which way has the lowest weight
+
+the example in zybooks uses a que that is wrong you should probably use a vertex or array
+
+
+You'll also use another matix to assign each string an int to be used in the code
+This will be handled in the GetIndex(std::string label) const function. 
+THIS IS JUST A SIMPLE FOR LOOP
+
+
+For the WEIGHT MATRIX
+	-Before you start putting in the weights start with INT_MAX its just a huge int kind of like using
+	infinity. Then later you'll put in the actual weights
+
+	-WHEN THERE IS A PATH FROM VERTICE TO VERTICE YOU ENTER IN THE WEIGHT OF THAT PATH HERE IN THE 
+	WEIGHT VERTEX
+
+	- 
+
+
+.push to put something on a que
+.pop and .front are used in ques as well
+
+
+
+
+Be careful when printing
+
+
+	
+
+
+
+
+
+	
